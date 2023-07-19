@@ -34,13 +34,28 @@ const lookup = {
 function rot13(encodedStr) {
   let decodedArr = []; // Your Result goes here
   // Only change code below this line
+const alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
 
-  return; //return decodedArr
+	let newstr='';
+
+	for(int i=0;i<encodedStr.length();i++){
+		let index=alphabet.indexOf(encodedStr.charAt[i])
+
+		if(index==-1){
+			newstr+=str[i]
+		}
+		else{
+			let newIndex=(index+13)%26
+			newstr+=alphabet[newIndex]
+		}
+		newstr+=alphabet.indexOf(encodedStr[i])
+	}
+  return newstr; //return decodedArr
 }
 
 // You can test your code by running the above function and printing it to console by pressing the run button at the top. To run it with input 36, uncomment the following line
 
-// console.log(rot13("SERR YBIR? NPPVBWBO"));
+console.log(rot13("SERR YBIR? NPPVBWBO"));
 
 // Do not change this line
 window.rot13 = rot13;
